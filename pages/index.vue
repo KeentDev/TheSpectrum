@@ -10,9 +10,9 @@
       </div>
       <div class="feat-section-cntr row">
         <div class="feat--full row --series">
-          <!-- <FeaturedPreview />
           <FeaturedPreview />
-          <FeaturedPreview /> -->
+          <FeaturedPreview />
+          <FeaturedPreview />
         </div>
         <div class="feat--compact col">
           <div class="feat--compact-body row">
@@ -102,10 +102,10 @@
           </li>
         </nav>
         <div class="col cat-post_list-cntr --series">
-          <!-- <CategorySection section-head="l_speak" :cat-posts="posts" />
+          <CategorySection section-head="l_speak" :cat-posts="posts" />
           <CategorySection section-head="editorial" :cat-posts="posts" />
           <CategorySection section-head="entertainment" :cat-posts="posts" />
-          <CategorySection section-head="sports" :cat-posts="posts" /> -->
+          <CategorySection section-head="sports" :cat-posts="posts" />
         </div>
       </div>
       <div id="cat_popular" class="responsive-space--custom" />
@@ -199,22 +199,26 @@
 </template>
 
 <script>
-// import FeaturedPreview from '~/components/FeaturedPreview'
+import FeaturedPreview from '~/components/FeaturedPreview'
+import CategorySection from '~/components/CategorySection'
 
 export default {
   components: {
-    // FeaturedPreview
+    FeaturedPreview,
+    CategorySection
   },
   data() {
     return {
-      posts: [{ title: 'test' }]
+      posts: [
+        { title: 'title 1', id: 1 },
+        { title: 'title 2', id: 2 }
+      ]
     }
   }
 }
 </script>
 
 <style lang="scss">
-// @import '@/assets/styles/functions.scss';
 
 .cat-post_list-cntr {
   width: 100%;
